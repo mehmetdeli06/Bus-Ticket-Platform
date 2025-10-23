@@ -1,0 +1,17 @@
+🧑‍💼 Admin Hesabı
+------------------
+Email: admin@example.com
+Şifre: 123456
+
+🏢 Firma Hesapları
+------------------
+1. AnkaraTurizm@example.com / 12345678
+   Sefer: Ankara → Karabük
+
+2. KarabukTurizm@example.com / testtest
+   Sefer: İstanbul → Ankara
+
+👤 Kullanıcı Hesapları
+----------------------
+1. test@example.com / 12345678
+2. test2@example.com / 12345678
