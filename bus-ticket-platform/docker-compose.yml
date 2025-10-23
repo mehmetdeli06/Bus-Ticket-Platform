@@ -1,0 +1,21 @@
+services:
+  web:
+    build: .
+    container_name: bilet_satin_alma
+    ports:
+      - "8000:80"
+    environment:
+      - TZ=Europe/Istanbul
+    restart: unless-stopped
+    volumes:
+      - ./app:/var/www/html/app
+      - ./public:/var/www/html/public
+      - ./storage:/var/www/html/storage
+    command: >
+      bash -lc "
+      mkdir -p /var/www/html/storage/sessions /var/www/html/storage/cache /var/www/html/storage/pdf &&
+      touch /var/www/html/storage/app.db &&
+      chown -R www-data:www-data /var/www/html/storage &&
+      chmod -R ug+rwX /var/www/html/storage &&
+      chmod 664 /var/www/html/storage/app.db || true;
+      exec apache2-foreground"
